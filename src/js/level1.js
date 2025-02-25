@@ -1,5 +1,5 @@
 //NOTE THE NAMING HERE: LEVEL1, used in config!
-import Candy, {Colors, Shapes, Patterns } from './candy.js';
+import Candy, { Colors, Shapes, Patterns } from './candy.js';
 export default class Level1 extends Phaser.Scene {
 
     graphics;
@@ -19,9 +19,19 @@ export default class Level1 extends Phaser.Scene {
 
     create() {
         //First, we initialize the editor window
-        C4C.Editor.Window.init(this);   //Scene is passed in to this init function.
-        C4C.Editor.Window.open();
+        const theme = {
+            "&": {
+                color: "black",
+                backgroundColor: "white",
+            },
+            ".cm-content, .cm-gutter": {
+                minHeight: "500px",
+            }
+        };
+        C4C.Editor.create(document.getElementById("code-editor"), theme);
         C4C.Editor.setText('moveleft'); //Example default text that will be in the editor window when it opens
+
+        // document.getElementsByClassName("cm-content")[0].setAttribute("contenteditable", "false")
         console.log("Text editor initialized.");
 
 
@@ -30,17 +40,17 @@ export default class Level1 extends Phaser.Scene {
         C4C.Interpreter.define("moveleft", () => {
             console.log("moveleft selected...");
             alert("hello");
-          });
+        });
 
         //Example of how we'd define a boolean for something.
         //C4C.Interpreter.define("candy.color = blue", () => {return this.color});
 
         document.getElementById("enableCommands").addEventListener("click", (event) => {
-                // document.getElementById("enableCommands").disabled = true;
-                //Grabbing text and then running it
-                let programText = C4C.Editor.getText();
-                C4C.Interpreter.run(programText);
-                runner.setProgram(programText);
+            // document.getElementById("enableCommands").disabled = true;
+            //Grabbing text and then running it
+            let programText = C4C.Editor.getText();
+            C4C.Interpreter.run(programText);
+            runner.setProgram(programText);
         });
 
         //We'll want to abstract this out into it's own function later... messy for now. 
@@ -75,7 +85,7 @@ export default class Level1 extends Phaser.Scene {
         // Clear the graphics object
         this.graphics.clear();
         this.graphics.lineStyle(2, 0xffffff, 1);
-        
+        console.log(this.game.loop.actualFps);
 
         // Draw the path
         this.path.draw(this.graphics);

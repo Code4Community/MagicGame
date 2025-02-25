@@ -1,7 +1,7 @@
 {
-  "name": "sortinggame",
+  "name": "magicgame",
   "version": "1.0.0",
-  "description": "Sorting Game",
+  "description": "Magic Game",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "c4c-lib": "github:code4community/c4c-lib",
-    "paper": "^0.12.17",
     "phaser": "^3.86.0"
   },
   "devDependencies": {
