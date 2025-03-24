@@ -1,10 +1,14 @@
 export default class MainMenu extends Phaser.Scene {
+    graphics;
+    path;
+    follower;
     preload() {
         // Load the background image
         //TO-DO: Add Texture manager: https://docs.phaser.io/phaser/concepts/textures
         //Example candy implementation  
+        console.log(this);
         this.load.image('background', 'assets/background.png');
-        this.load.image('follower', 'assets/blue_circle_striped.png'); // Load the candy image
+        // this.load.image('follower', 'assets/blue_circle_striped.png'); // Load the candy image
         //this.load.image('follower', 'assets/follower.png'); // Optional: Load a follower sprite
     }
     create() {

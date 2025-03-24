@@ -15,9 +15,6 @@ export default class Canvas extends Phaser.Scene {
     this.scenes.set('level 1', new Level1());
     this.currentScene = this.scenes.get('main menu');
   }
-  graphics;
-  path;
-  follower;
 
   preload() {
     this.currentScene.preload();
