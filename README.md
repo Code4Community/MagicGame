@@ -1,35 +1,12 @@
-# MagicGame
-Magic Tower Defense Game
+# 2025Template
+This is a template for using phaser and c4clib.  If you make a project from this, the only things you should have to edit are `README.md`, `index.html`, and the things inside the `src/` directory.
 
+To create a new directory from this template, just click "Use this template" in the top right corner, and click "Create a new repository"
 
-# Description
-- tower defense game where the player is a wizard that scribes spells
-- the player tries to fend off a hoard of enemies with spells
-- the player is given a default spell that does very little and will never win the round 
-- the default spell can be a hint for players that observe what the spell is lacking
-- construct spells using scribe (constructor) and set a spells properties
-- calls functions that the player modifies
-- properties and certain function calls cost a different amount of mana
-- player has a set amount of mana and mana regeneration every level
-- limits the player so that they cannot have 1B attack speed
+# Running
+To run this, make sure you have Node.js installed.  
+In a terminal with the directory open, type `npm i` to install dependencies. Note you only have to do this the first time you run.  
+Then, type `npm start` (you have to do this each time you run)
 
-# Learning Goals
-- object oriented programming
-- function calls within other functions
-- a more difficult problem solving challenge for students that enjoy killing things
-
-# Student Code Structure
-- scribe function that constructs a spell and its properties
-- trajectory, speed, attack speed, etc
-- 
-- onHit function that can be modified for the spells
-- (maybe?) spells that call other spells
-
-# Level ideas
-- a hoard of tiny enemies that require rapid-fire small spells or an explosive spell to kill, default spell will be a low attack speed spell
-- a hoard that comes from different directions, will force player to change tragectory of spell
-- mix of big and small that require different spells (spell switching????)
-- enemies with a 1 hit shield
-- enemies that are weak and strong to certain spells (???)
-- different levels can have different spell types
-- projectile spells, aoe spells, lazer spells???, etc
+# Deploying
+If you want to deploy the project, all you need to do is go to your github settings, click "pages" on the left sidebar, and change "Source" to Github Actions
